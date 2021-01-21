@@ -1,65 +1,55 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Layout, { siteTitle } from '../components/layout'
+import utilStyles from '../styles/utils.module.css'
+import { getSortedPostsData } from '../lib/posts'
+import Link from 'next/link'
+import {postsTitle} from './posts/index'
+
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData()
+  return {
+    props: {
+      allPostsData
+    }
+  }
+}
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Layout home>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{siteTitle}</title>
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+      <section>
+        <p>
+          ようこそ。ここは無趣味人ことCJのウェブサイトです。CJというのはもちろん偽名です。お仕事はとあるソフトウェアのテクニカルサポートですが、それに直接関連することはきっと書かないでしょう。
         </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+        <p>
+          ところで、趣味って何でしょうね。大人になると、無難に会話を持たせるために趣味の話を持ち出す人が多くなりますが、「私の趣味は○○です」と断言してしまうのは、セルフイメージが固定化されそうで好きになれません。それに、他人から完璧には理解されたくないという気持ちは普遍的だと思いますが……いや僕だけかなぁ。
+        </p>
+        <p>
+          というわけで、お暇な人はどうぞ。
+        </p>
+      </section>
+      <section className={utilStyles.padding1px}>
+        <h2 className={utilStyles.headingLg}>
+          <Link href="/posts">
+            <a>{postsTitle}</a>
+          </Link>
+        </h2>
+        <p>ほとんどは古いサイトから引っ張ってきました。日記としては全然継続できてません。</p>
+      </section>
+      <section className={utilStyles.padding1px}>
+        <h2 className={utilStyles.headingMd}>
+          連絡先等
+        </h2>
+        <p>SNS等のアカウントです。ほぼ投稿しませんが。</p>
+        <ul>
+          <li>
+            <a href="https://twitter.com/cjthe0ne">Twitter</a>
+          </li>
+        </ul>
+      </section>
+    </Layout>
   )
 }
