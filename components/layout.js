@@ -15,7 +15,7 @@ export default function Layout({ children, home }) {
             property="og:image"
             content={`https://ogi-api.vercel.app/${encodeURI(
               siteTitle
-            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2cjtheone.net%2Fprofile.png`}
+            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fcjtheone.net%2Fprofile.png`}
           />
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
