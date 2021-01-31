@@ -1,0 +1,40 @@
+{
+    "redirects": [
+        {
+            "source": "/post",
+            "destination": "/posts"
+        },
+        {
+            "source": "/post/appliance-selection-for-smarthome-hub",
+            "destination": "/posts/appliance-selection-for-smarthome-hub"
+        },
+        {
+            "source": "/post/ielts2days",
+            "destination": "/posts/ielts2days"
+        },
+        {
+            "source": "/post/ielts2days",
+            "destination": "/posts/ielts2days"
+        },
+        {
+            "source": "/post/mfwebsites",
+            "destination": "/posts/mfwebsites"
+        },
+        {
+            "source": "/post/myfirstielts",
+            "destination": "/posts/myfirstielts"
+        },
+        {
+            "source": "/post/steamvrmemo",
+            "destination": "/posts/steamvrmemo"
+        },
+        {
+            "source": "/post/wimaxcancellation",
+            "destination": "/posts/wimaxcancellation"
+        },
+        {
+            "source": "/post/windows_memory_log",
+            "destination": "/posts/windows_memory_log"
+        }
+    ]
+}
