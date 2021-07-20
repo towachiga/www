@@ -13,7 +13,7 @@ export async function getStaticProps() {
   }
 }
 
-export const postsTitle = "Blog"
+export const postsTitle = "All Posts"
 
 export default function Posts({ allPostsData }) {
   return (
