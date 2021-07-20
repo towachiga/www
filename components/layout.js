@@ -52,13 +52,13 @@ export default function Layout({ children, home, title }) {
         )}
       </header>
       <main>{children}</main>
-      {!home && (
+      {/* {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
         </div>
-      )}
+      )} */}
       <footer>
         {/* <p className={`${styles.footNote} ${utilStyles.lightText}`}>
                     フッター
