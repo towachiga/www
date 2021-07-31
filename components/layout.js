@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import { postsTitle } from "../pages/posts/index";
 
 export const siteTitle = "無趣味人";
 
@@ -48,17 +49,19 @@ export default function Layout({ children, home, title }) {
                 <a className={utilStyles.colorInherit}>{siteTitle}</a>
               </Link>
             </h2>
+            {`${title}` != `${postsTitle}` && (
+              <h2
+                className={`${utilStyles.headingMd} ${styles.headerPostsLink}`}
+              >
+                <Link href="/posts">
+                  <a>{postsTitle}</a>
+                </Link>
+              </h2>
+            )}
           </>
         )}
       </header>
       <main>{children}</main>
-      {/* {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )} */}
       <footer>
         {/* <p className={`${styles.footNote} ${utilStyles.lightText}`}>
                     フッター
