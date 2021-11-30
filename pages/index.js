@@ -30,7 +30,7 @@ export default function Home() {
         <p>SNS等のアカウントです。ほぼ投稿しませんが。</p>
         <ul>
           <li>
-            <a href="https://twitter.com/towaghiga">Twitter</a>
+            <a href="https://twitter.com/towachiga">Twitter</a>
           </li>
         </ul>
       </section>
