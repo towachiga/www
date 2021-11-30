@@ -12,7 +12,7 @@ export default function Layout({ children, home, title }) {
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="CJのウェブサイト" />
+        <meta name="description" content="towachgaのウェブサイト" />
         <title>{pageTitle}</title>
         <meta name="og:title" content={pageTitle} />
         <meta property="og:image" content="https://cjtheone.net/profile.png" />
@@ -67,7 +67,7 @@ export default function Layout({ children, home, title }) {
                     フッター
                 </p> */}
         <p className={`${styles.copyRight} ${utilStyles.lightText}`}>
-          ©2021 CJ
+          ©2021 towachga
         </p>
       </footer>
     </div>
