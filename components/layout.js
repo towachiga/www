@@ -18,7 +18,7 @@ export default function Layout({ children, home, title }) {
         <meta property="og:image" content="https://cjtheone.net/profile.png" />
         <meta name="twitter:card" content="summary" />
         <script
-          data-goatcounter="https://cjtheone.goatcounter.com/count"
+          data-goatcounter="https://towachiga.goatcounter.com/count"
           async
           src="//gc.zgo.at/count.js"
         ></script>
