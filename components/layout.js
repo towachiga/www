@@ -15,7 +15,7 @@ export default function Layout({ children, home, title }) {
         <meta name="description" content="towachgaのウェブサイト" />
         <title>{pageTitle}</title>
         <meta name="og:title" content={pageTitle} />
-        <meta property="og:image" content="https://cjtheone.net/profile.png" />
+        <meta property="og:image" content="https://towachiga.net/profile.png" />
         <meta name="twitter:card" content="summary" />
         <script
           data-goatcounter="https://towachiga.goatcounter.com/count"
